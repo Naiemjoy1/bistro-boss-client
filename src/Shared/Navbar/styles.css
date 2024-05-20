@@ -1,0 +1,13 @@
+.redBackground {
+  background-color: red;
+  border-radius: 8px;
+}
+
+.navbar a.active {
+  color: white;
+}
+
+.nav-link.active {
+  background-color: green; /* Green background color for active state */
+  color: #fff; /* White text color for active state */
+}
