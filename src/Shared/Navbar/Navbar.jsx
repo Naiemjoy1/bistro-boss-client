@@ -1,35 +1,47 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import "./styles.css";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
+
   const navLink = (
     <>
-      <NavLink to="/" activeClassName="active">
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/menu">Our Menu</Link>
+      </li>
+      <li>
+        <Link to="/shop/salad">Our Shop</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact us</Link>
+      </li>
+      <li>
+        <Link to="/dashboard">Dashboard</Link>
+      </li>
+
+      {user ? (
         <li>
-          <a>Home</a>
+          <Link onClick={handleLogOut} to="/dashboard">
+            Log Out
+          </Link>
         </li>
-      </NavLink>
-      <NavLink to="/contact" activeClassName="active">
+      ) : (
         <li>
-          <a>Contact us</a>
+          <Link to="/login">Log Out</Link>
         </li>
-      </NavLink>
-      <NavLink to="/dashboard" activeClassName="active">
-        <li>
-          <a>Dashboard</a>
-        </li>
-      </NavLink>
-      <NavLink to="/menu" activeClassName="active">
-        <li>
-          <a>Our Menu</a>
-        </li>
-      </NavLink>
-      <NavLink to="/shop/salad" activeClassName="active">
-        <li>
-          <a>Our Shop</a>
-        </li>
-      </NavLink>
+      )}
     </>
   );
   return (
