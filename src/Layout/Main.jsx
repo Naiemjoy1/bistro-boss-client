@@ -9,7 +9,8 @@ const Main = () => {
     location.pathname.includes("login") ||
     location.pathname.includes("signup") ||
     location.pathname.includes("userupdate") ||
-    location.pathname.includes("dashboard");
+    location.pathname.includes("dashboard") ||
+    location.pathname.includes("contact");
   return (
     <div>
       {noHeaderFooter || <Navbar></Navbar>}

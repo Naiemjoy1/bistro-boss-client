@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaCartPlus } from "react-icons/fa";
 import useCart from "../../Hooks/useCart";
+import RightSideDrawer from "./RightSideDrawer";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -118,12 +119,13 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
         <div className="navbar-end gap-4">
-          <Link to="/dashboard/cart">
+          {/* <Link to="/dashboard/cart">
             <button className="btn btn-sm">
               <FaCartPlus />
               <div className="badge badge-secondary">+{cart.length}</div>
             </button>
-          </Link>
+          </Link> */}
+          <RightSideDrawer cart={cart}></RightSideDrawer>
           {user ? (
             <div className="dropdown dropdown-hover dropdown-end">
               <label
