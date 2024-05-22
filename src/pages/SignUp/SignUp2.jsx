@@ -6,9 +6,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
 
-import loginImg from "../../assets/others/authentication2.png";
-
-const SignUp = () => {
+const SignUp2 = () => {
   const {
     register,
     handleSubmit,
@@ -70,7 +68,12 @@ const SignUp = () => {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center w-1/2 lg:text-left">
-            <img src={loginImg} alt="" />
+            <h1 className="text-5xl font-bold">Sign Up now!</h1>
+            <p className="py-6">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p>
             <Link to="/">
               <button className="btn btn-primary">Home</button>
             </Link>
@@ -176,4 +179,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUp2;

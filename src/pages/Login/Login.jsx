@@ -1,8 +1,9 @@
+// src/Components/Login.jsx
+
 import { useContext, useEffect, useState } from "react";
 import {
   loadCaptchaEnginge,
   LoadCanvasTemplate,
-  LoadCanvasTemplateNoReload,
   validateCaptcha,
 } from "react-simple-captcha";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -10,22 +11,29 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
+import loginImg from "../../assets/others/authentication.gif";
+
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
 
   const from = location.state?.from?.pathname || "/";
+  console.log("state in the location log", location.state);
 
-  const handleLogin = (e) => {
+  const { signIn } = useContext(AuthContext);
+
+  const handleLogin = async (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
-    signIn(email, password).then((result) => {
+
+    try {
+      const result = await signIn(email, password);
       const user = result.user;
       console.log(user);
+
       Swal.fire({
         position: "top-end",
         icon: "success",
@@ -33,11 +41,17 @@ const Login = () => {
         showConfirmButton: false,
         timer: 1500,
       });
-      navigate(from, { replace: true });
-    });
-  };
 
-  const { signIn } = useContext(AuthContext);
+      navigate(from, { replace: true });
+    } catch (error) {
+      console.error("Login failed", error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    }
+  };
 
   useEffect(() => {
     loadCaptchaEnginge(6);
@@ -55,11 +69,10 @@ const Login = () => {
   return (
     <div>
       <Helmet>
-        <title>Bistro Boss | Login </title>
-        <link rel="canonical" href="https://www.tacobell.com/" />
+        <title>Bistro Boss | Login</title>
       </Helmet>
       <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse ">
+        <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center w-1/2 lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
             <p className="py-6">
@@ -108,7 +121,7 @@ const Login = () => {
                 </label>
                 <input
                   onBlur={handleValidateCaptcha}
-                  type="captcha"
+                  type="text"
                   name="captcha"
                   placeholder="type the captcha above"
                   className="input input-bordered"
@@ -122,7 +135,7 @@ const Login = () => {
               </div>
             </form>
             <p>
-              new here? create an account <Link to="/signup">signUp</Link>
+              New here? Create an account <Link to="/signup">Sign Up</Link>
             </p>
           </div>
         </div>

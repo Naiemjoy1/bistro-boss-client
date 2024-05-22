@@ -2,12 +2,15 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../pages/Home/Home";
 import ContactUs from "../pages/Contact us/ContactUs";
-import Dashboard from "../pages/Dashboard/Dashboard";
 import OurMenu from "../pages/OurMenu/OurMenu";
 import OurShop from "../pages/OurShop/OurShop";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoutes from "./PrivateRoutes";
+import UserDetailsUpdate from "../pages/UserDetailsUpdate/UserDetailsUpdate";
+import SignUp2 from "../pages/SignUp/SignUp2";
+import Dashboard from "../Layout/Dashboard";
+import Cart from "../pages/Dashboard/Cart";
 
 export const router = createBrowserRouter([
   {
@@ -22,14 +25,7 @@ export const router = createBrowserRouter([
         path: "/contact",
         element: <ContactUs></ContactUs>,
       },
-      {
-        path: "/dashboard",
-        element: (
-          <PrivateRoutes>
-            <Dashboard></Dashboard>
-          </PrivateRoutes>
-        ),
-      },
+
       {
         path: "/menu",
         element: <OurMenu></OurMenu>,
@@ -45,6 +41,24 @@ export const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "/userupdate",
+        element: <UserDetailsUpdate></UserDetailsUpdate>,
+      },
+      {
+        path: "/test",
+        element: <SignUp2></SignUp2>,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard></Dashboard>,
+        children: [
+          {
+            path: "cart",
+            element: <Cart></Cart>,
+          },
+        ],
       },
     ],
   },
