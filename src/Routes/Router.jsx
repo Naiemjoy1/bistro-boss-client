@@ -11,6 +11,7 @@ import UserDetailsUpdate from "../pages/UserDetailsUpdate/UserDetailsUpdate";
 import SignUp2 from "../pages/SignUp/SignUp2";
 import Dashboard from "../Layout/Dashboard";
 import Cart from "../pages/Dashboard/Cart";
+import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 
 export const router = createBrowserRouter([
   {
@@ -52,11 +53,20 @@ export const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Dashboard></Dashboard>,
+        element: (
+          <PrivateRoutes>
+            <Dashboard></Dashboard>
+          </PrivateRoutes>
+        ),
         children: [
           {
             path: "cart",
             element: <Cart></Cart>,
+          },
+          //admin
+          {
+            path: "users",
+            element: <AllUsers></AllUsers>,
           },
         ],
       },

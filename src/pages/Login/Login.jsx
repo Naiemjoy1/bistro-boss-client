@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
 import loginImg from "../../assets/others/authentication.gif";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
@@ -137,6 +138,7 @@ const Login = () => {
             <p>
               New here? Create an account <Link to="/signup">Sign Up</Link>
             </p>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>

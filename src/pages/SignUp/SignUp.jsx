@@ -7,8 +7,11 @@ import Swal from "sweetalert2";
 import axios from "axios";
 
 import loginImg from "../../assets/others/authentication2.png";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 const SignUp = () => {
+  const axiosPublic = useAxiosPublic();
   const {
     register,
     handleSubmit,
@@ -47,15 +50,24 @@ const SignUp = () => {
 
       // save username and photo
       await updateUserProfile(name, displayUrl);
-      reset();
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "User Created Successfully",
-        showConfirmButton: false,
-        timer: 1500,
+      const userInfo = {
+        name: data.name,
+        email: data.email,
+      };
+      axiosPublic.post("/users", userInfo).then((res) => {
+        if (res.data.insertedId) {
+          console.log("user added to the database");
+          reset();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "User Created Successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          navigate("/");
+        }
       });
-      navigate("/");
     } catch (error) {
       console.error("Error uploading image:", error);
     }
@@ -169,6 +181,7 @@ const SignUp = () => {
             <p>
               Already have an account? <Link to="/login">Log In</Link>
             </p>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>

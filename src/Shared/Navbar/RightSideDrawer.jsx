@@ -9,6 +9,7 @@ import "react-modern-drawer/dist/index.css";
 import useCart from "../../Hooks/useCart";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const RightSideDrawer = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -57,9 +58,10 @@ const RightSideDrawer = () => {
         open={isOpen}
         onClose={toggleDrawer}
         direction="right"
-        className="bla bla bla"
+        // className="w-[400px]"
+        style={{ width: "350px" }}
       >
-        <div className="p-4">
+        <div className="p-6">
           <p className="font-bold mt-4">Items: {cart.length}</p>
           <div className="divider divider-neutral"></div>
           <div className="cart-items-container h-96 overflow-y-auto mt-4 ">
@@ -68,21 +70,21 @@ const RightSideDrawer = () => {
                 key={item._id}
                 className="flex justify-left gap-4 items-center mb-4"
               >
-                <div className="w-3/12">
+                <div className="w-1/6">
                   <div className="avatar">
                     <div className="w-10 rounded">
                       <img src={item.image} />
                     </div>
                   </div>
                 </div>
-                <div className="w-6/12">
+                <div className="w-4/6">
                   <p>{item.name}</p>
                   <p>
                     <span className="font-semibold">Price: </span>
                     {item.price}
                   </p>
                 </div>
-                <div className="w-3/12">
+                <div className="w-1/6">
                   <button
                     onClick={() => handleDelete(item._id)}
                     className="btn btn-ghost "
@@ -107,9 +109,11 @@ const RightSideDrawer = () => {
             <p>Total Price:</p>
             <p>{roundedTotalPrice}</p>
           </div>
-          <button className="btn btn-primary w-full btn-sm mt-5">
-            Pay Now
-          </button>
+          <Link to="/dashboard/cart">
+            <button className="btn btn-primary w-full btn-sm mt-5">
+              Pay Now
+            </button>
+          </Link>
         </div>
       </Drawer>
     </div>
