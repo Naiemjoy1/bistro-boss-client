@@ -4,6 +4,7 @@ import useMenu from "../../Hooks/useMenu";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { Link } from "react-router-dom";
 
 const ManageItems = () => {
   const [menu, loading, refetch] = useMenu();
@@ -20,25 +21,16 @@ const ManageItems = () => {
       confirmButtonText: "Yes, delete it!",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        try {
-          const res = await axiosSecure.delete(`/menu/${item._id}`);
-          // console.log(res.data);
-          if (res.data.deletedCount > 0) {
-            refetch();
-            Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: `${item.name} has been deleted`,
-              showConfirmButton: false,
-              timer: 1500,
-            });
-          }
-        } catch (error) {
-          console.error("Error deleting item:", error);
+        console.log("Sending delete request for item ID:", item._id);
+        const res = await axiosSecure.delete(`/menu/${item._id}`);
+        // console.log(res.data);
+        if (res.data.deletedCount > 0) {
+          // refetch
+          refetch();
           Swal.fire({
             position: "top-end",
-            icon: "error",
-            title: "Failed to delete item",
+            icon: "success",
+            title: `${item.name} has been deleted`,
             showConfirmButton: false,
             timer: 1500,
           });
@@ -89,12 +81,11 @@ const ManageItems = () => {
                     <td>{item.name}</td>
                     <td>{item.price}</td>
                     <th>
-                      <button
-                        onClick={() => handleUpdate(item)}
-                        className="btn btn-warning "
-                      >
-                        <FaEdit className="text-lg text-white"></FaEdit>
-                      </button>
+                      <Link to={`/dashboard/updateitem/${item._id}`}>
+                        <button className="btn btn-warning ">
+                          <FaEdit className="text-lg text-white"></FaEdit>
+                        </button>
+                      </Link>
                     </th>
                     <th>
                       <button
