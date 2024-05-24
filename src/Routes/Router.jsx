@@ -12,6 +12,11 @@ import SignUp2 from "../pages/SignUp/SignUp2";
 import Dashboard from "../Layout/Dashboard";
 import Cart from "../pages/Dashboard/Cart";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
+import AddItems from "../pages/AddItems/AddItems";
+import ManageItems from "../pages/ManageItems/ManageItems";
+import ManageBookings from "../pages/ManageBookings/ManageBookings";
+import AdminHome from "../pages/AdminHome/AdminHome";
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
   {
@@ -65,8 +70,32 @@ export const router = createBrowserRouter([
           },
           //admin
           {
+            path: "adminhome",
+            element: <AdminHome></AdminHome>,
+          },
+          {
             path: "users",
-            element: <AllUsers></AllUsers>,
+            element: (
+              <AdminRoute>
+                <AllUsers></AllUsers>
+              </AdminRoute>
+            ),
+          },
+          {
+            path: "additems",
+            element: (
+              <AdminRoute>
+                <AddItems></AddItems>
+              </AdminRoute>
+            ),
+          },
+          {
+            path: "manageitems",
+            element: <ManageItems></ManageItems>,
+          },
+          {
+            path: "managebookings",
+            element: <ManageBookings></ManageBookings>,
           },
         ],
       },
