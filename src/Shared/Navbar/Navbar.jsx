@@ -54,7 +54,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/dashboard/adminhome"
+          to="/dashboard"
           style={({ isActive }) => (isActive ? { backgroundColor: "red" } : {})}
         >
           Dashboard

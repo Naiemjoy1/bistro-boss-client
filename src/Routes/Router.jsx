@@ -18,6 +18,11 @@ import ManageBookings from "../pages/ManageBookings/ManageBookings";
 import AdminHome from "../pages/AdminHome/AdminHome";
 import AdminRoute from "./AdminRoute";
 import UpdateItem from "../pages/ManageItems/UpdateItem";
+import UserHome from "../pages/Dashboard/UserHome/UserHome";
+import Reservation from "../pages/Dashboard/Reservation/Reservation";
+import AddReview from "../pages/Dashboard/AddReview/AddReview";
+import MyBookings from "../pages/Dashboard/MyBookings/MyBookings";
+import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
 
 export const router = createBrowserRouter([
   {
@@ -66,9 +71,30 @@ export const router = createBrowserRouter([
         ),
         children: [
           {
+            path: "userhome",
+            element: <UserHome></UserHome>,
+          },
+          {
+            path: "reservation",
+            element: <Reservation></Reservation>,
+          },
+          {
+            path: "payments",
+            element: <PaymentHistory></PaymentHistory>,
+          },
+          {
             path: "cart",
             element: <Cart></Cart>,
           },
+          {
+            path: "review",
+            element: <AddReview></AddReview>,
+          },
+          {
+            path: "bookings",
+            element: <MyBookings></MyBookings>,
+          },
+
           //admin
           {
             path: "adminhome",

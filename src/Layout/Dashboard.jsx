@@ -9,7 +9,7 @@ import {
   FaUsers,
   FaUtensils,
 } from "react-icons/fa";
-import { GiStarsStack } from "react-icons/gi";
+import { GiStarsStack, GiWallet } from "react-icons/gi";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../Hooks/useCart";
 import useAdmin from "../Hooks/useAdmin";
@@ -72,8 +72,13 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/userhome">
+                <NavLink to="/dashboard/reservation">
                   <FaCalendar></FaCalendar> Reservation
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/dashboard/payments">
+                  <GiWallet /> Payment History
                 </NavLink>
               </li>
               <li>
