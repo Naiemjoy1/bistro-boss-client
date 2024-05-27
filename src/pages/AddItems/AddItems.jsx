@@ -16,8 +16,10 @@ const AddItems = () => {
     reset,
     formState: { errors },
   } = useForm();
+  
   const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure();
+
   const onSubmit = async (data) => {
     console.log("form data", data);
 

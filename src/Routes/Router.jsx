@@ -23,6 +23,7 @@ import Reservation from "../pages/Dashboard/Reservation/Reservation";
 import AddReview from "../pages/Dashboard/AddReview/AddReview";
 import MyBookings from "../pages/Dashboard/MyBookings/MyBookings";
 import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
+import Payment from "../pages/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ export const router = createBrowserRouter([
           {
             path: "payments",
             element: <PaymentHistory></PaymentHistory>,
+          },
+          {
+            path: "payment",
+            element: <Payment></Payment>,
           },
           {
             path: "cart",
