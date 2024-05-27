@@ -97,19 +97,19 @@ const RightSideDrawer = () => {
           </div>
           <div className="divider divider-neutral"></div>
           <div className="flex justify-between items-center">
-            <p>Sub Total Price:</p>
+            <p>Total Price:</p>
             <p> {totalPrice}</p>
           </div>
           <div className="flex justify-between items-center">
             <p>Discount:</p>
-            <p>{discount}</p>
+            <p></p>
           </div>
           <div className="divider divider-neutral"></div>
           <div className="flex justify-between items-center">
             <p>Total Price:</p>
-            <p>{roundedTotalPrice}</p>
+            <p>{totalPrice}</p>
           </div>
-          <Link to="/dashboard/cart">
+          <Link to="/dashboard/payment">
             <button className="btn btn-primary w-full btn-sm mt-5">
               Pay Now
             </button>
