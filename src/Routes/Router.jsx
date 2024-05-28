@@ -103,7 +103,11 @@ export const router = createBrowserRouter([
           //admin
           {
             path: "adminhome",
-            element: <AdminHome></AdminHome>,
+            element: (
+              <AdminRoute>
+                <AdminHome></AdminHome>
+              </AdminRoute>
+            ),
           },
           {
             path: "users",
@@ -133,11 +137,19 @@ export const router = createBrowserRouter([
           },
           {
             path: "manageitems",
-            element: <ManageItems></ManageItems>,
+            element: (
+              <AdminRoute>
+                <ManageItems></ManageItems>
+              </AdminRoute>
+            ),
           },
           {
             path: "managebookings",
-            element: <ManageBookings></ManageBookings>,
+            element: (
+              <AdminRoute>
+                <ManageBookings></ManageBookings>
+              </AdminRoute>
+            ),
           },
         ],
       },

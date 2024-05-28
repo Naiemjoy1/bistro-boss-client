@@ -6,10 +6,12 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { FaCartPlus } from "react-icons/fa";
 import useCart from "../../Hooks/useCart";
 import RightSideDrawer from "./RightSideDrawer";
+import useAdmin from "../../Hooks/useAdmin";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const [cart] = useCart();
+  const [isAdmin] = useAdmin();
 
   const handleLogOut = () => {
     logOut()
@@ -52,14 +54,30 @@ const Navbar = () => {
           Contact us
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/dashboard"
-          style={({ isActive }) => (isActive ? { backgroundColor: "red" } : {})}
-        >
-          Dashboard
-        </NavLink>
-      </li>
+      {user && isAdmin && (
+        <li>
+          <NavLink
+            to="/dashboard/adminhome"
+            style={({ isActive }) =>
+              isActive ? { backgroundColor: "red" } : {}
+            }
+          >
+            Dashboard
+          </NavLink>
+        </li>
+      )}
+      {user && !isAdmin && (
+        <li>
+          <NavLink
+            to="/dashboard/userhome"
+            style={({ isActive }) =>
+              isActive ? { backgroundColor: "red" } : {}
+            }
+          >
+            Dashboard
+          </NavLink>
+        </li>
+      )}
 
       {/* {user ? (
         <>

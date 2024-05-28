@@ -10,16 +10,20 @@ const PaymentHistory = () => {
     queryKey: ["payments", user.email],
     queryFn: async () => {
       const res = await axiosSecure.get(`/payments/${user.email}`);
-      return res.data;
+      const filteredPayments = res.data.filter(
+        (payment) => payment.email === user.email
+      );
+      console.log("Filtered Payments: ", filteredPayments);
+      return filteredPayments;
     },
   });
 
   return (
     <div>
-      <h2>total payments: {payments.length}</h2>
+      <h2>Total payments: {payments.length}</h2>
       <div className="overflow-x-auto">
         <table className="table">
-          {/* head */}
+          {/* Head */}
           <thead>
             <tr>
               <th>#</th>
@@ -29,7 +33,7 @@ const PaymentHistory = () => {
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
+            {/* Rows */}
             {payments.map((payment, index) => (
               <tr key={payment._id}>
                 <th>{index + 1}</th>
