@@ -1,67 +1,83 @@
-# Naiem Joy's Portfolio
+# 👋 Naiem Joy's Portfolio
 
-Welcome to my portfolio! I'm Naiem Joy, a passionate frontend web developer with expertise in React.js. This repository serves as a showcase of my projects, skills, and experiences in the field.
+Welcome to my portfolio! I'm **Naiem Joy**, a passionate frontend web developer specializing in **React.js**. This repository showcases my projects, skills, and professional experiences.
 
-## Projects
+---
+
+## 🚀 Projects
 
 ### Project 1: Project Name
-- Description: Briefly describe the project and its purpose.
-- Technologies Used: List the technologies used (e.g., React.js, HTML, CSS, etc.).
-- Demo: Provide a link to the live demo or a video walkthrough if available.
-- GitHub Repository: Link to the GitHub repository.
+- **Description**: Briefly describe the project and its purpose.
+- **Technologies Used**: React.js, HTML, CSS, etc.
+- **Demo**: [Live Demo](#)
+- **GitHub Repository**: [Repository Link](#)
 
 ### Project 2: Project Name
-- Description: Briefly describe the project and its purpose.
-- Technologies Used: List the technologies used (e.g., React.js, HTML, CSS, etc.).
-- Demo: Provide a link to the live demo or a video walkthrough if available.
-- GitHub Repository: Link to the GitHub repository.
+- **Description**: Briefly describe the project and its purpose.
+- **Technologies Used**: React.js, HTML, CSS, etc.
+- **Demo**: [Live Demo](#)
+- **GitHub Repository**: [Repository Link](#)
 
 ### Project 3: Project Name
-- Description: Briefly describe the project and its purpose.
-- Technologies Used: List the technologies used (e.g., React.js, HTML, CSS, etc.).
-- Demo: Provide a link to the live demo or a video walkthrough if available.
-- GitHub Repository: Link to the GitHub repository.
+- **Description**: Briefly describe the project and its purpose.
+- **Technologies Used**: React.js, HTML, CSS, etc.
+- **Demo**: [Live Demo](#)
+- **GitHub Repository**: [Repository Link](#)
 
-## Skills
+---
 
-- React.js ![React.js](https://img.icons8.com/color/48/000000/react-native.png)
-- JavaScript (ES6+) ![JavaScript](https://img.icons8.com/color/48/000000/javascript.png)
-- HTML5 & CSS3 ![HTML5 & CSS3](https://img.icons8.com/color/48/000000/html-5--v1.png) ![CSS3](https://img.icons8.com/color/48/000000/css3.png)
-- Responsive Web Design ![Responsive Web Design](https://img.icons8.com/office/48/000000/responsive.png)
-- Version Control (Git) ![Git](https://img.icons8.com/color/48/000000/git.png)
-- UI/UX Design Principles ![UI/UX Design](https://img.icons8.com/office/48/000000/design.png)
-- RESTful APIs ![RESTful APIs](https://img.icons8.com/officel/48/000000/api.png)
-- Adobe Photoshop ![Adobe Photoshop](https://img.icons8.com/color/48/000000/adobe-photoshop.png)
-- Adobe Illustrator ![Adobe Illustrator](https://img.icons8.com/color/48/000000/adobe-illustrator.png)
+## 🛠️ Skills
 
-## Work Experience
+![React.js](https://img.shields.io/badge/-React.js-61DAFB?logo=react&logoColor=white&style=flat)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat)
+![Responsive Web Design](https://img.shields.io/badge/-Responsive%20Web%20Design-4285F4?logo=google&logoColor=white&style=flat)
+![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white&style=flat)
+![UI/UX Design](https://img.shields.io/badge/-UI%2FUX%20Design-6200EA?logo=adobe&logoColor=white&style=flat)
+![RESTful APIs](https://img.shields.io/badge/-RESTful%20APIs-FF6F00?logo=api&logoColor=white&style=flat)
+![Adobe Photoshop](https://img.shields.io/badge/-Adobe%20Photoshop-31A8FF?logo=adobe-photoshop&logoColor=white&style=flat)
+![Adobe Illustrator](https://img.shields.io/badge/-Adobe%20Illustrator-FF9A00?logo=adobe-illustrator&logoColor=white&style=flat)
+
+---
+
+## 🧑‍💼 Work Experience
 
 ### Company Name (Dates of Employment)
-- Position: Frontend Web Developer
-- Responsibilities: Describe your responsibilities and achievements.
-- Technologies Used: List the technologies and tools you worked with.
+- **Position**: Frontend Web Developer
+- **Responsibilities**: Describe your responsibilities and achievements.
+- **Technologies Used**: List the technologies and tools you worked with.
 
 ### Company Name (Dates of Employment)
-- Position: Frontend Intern
-- Responsibilities: Describe your responsibilities and achievements during the internship.
-- Technologies Used: List the technologies and tools you worked with.
+- **Position**: Frontend Intern
+- **Responsibilities**: Describe your responsibilities and achievements during the internship.
+- **Technologies Used**: List the technologies and tools you worked with.
 
-## Education
+---
 
-- Degree: Bachelor of Science in Computer Science
-- University: [Your University Name]
-- Graduation Year: [Year]
+## 🎓 Education
 
-## GitHub Stats
+- **Degree**: Bachelor of Science in Computer Science
+- **University**: [Your University Name]
+- **Graduation Year**: [Year]
 
-![Naiem Joy's GitHub stats](https://github-readme-stats.vercel.app/api?username=naiemjoy1&show_icons=true&theme=radical)
+---
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=naiemjoy1&layout=compact&theme=radical)
+## 📊 GitHub Stats
 
-## Contact
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=naiemjoy1&show_icons=true&theme=radical" alt="Naiem Joy's GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=naiemjoy1&layout=compact&theme=radical" alt="Top Langs" />
+</p>
 
-Feel free to reach out to me via email at [Your Email Address]. You can also connect with me on [LinkedIn](https://www.linkedin.com/in/yourlinkedin) for professional inquiries and collaborations.
+---
 
-## License
+## 📫 Contact
+
+Feel free to reach out to me via email at [your.email@example.com]. You can also connect with me on [LinkedIn](https://www.linkedin.com/in/yourlinkedin) for professional inquiries and collaborations.
+
+---
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
