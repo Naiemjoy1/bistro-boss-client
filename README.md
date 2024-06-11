@@ -70,6 +70,8 @@ Welcome to my portfolio! I'm **Naiem Joy**, a passionate frontend web developer 
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=naiemjoy1&theme=radical" alt="Naiem Joy's GitHub Streak" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=naiemjoy1&layout=compact&theme=radical" alt="Top Languages" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=naiemjoy1&theme=radical" alt="Profile Summary" />
+  <img src="https://activity-graph.herokuapp.com/graph?username=naiemjoy1&theme=radical" alt="GitHub Activity Graph" />
+  <img src="https://github-profile-trophy.vercel.app/?username=naiemjoy1&theme=radical" alt="GitHub Trophy" />
 </p>
 
 ---
